@@ -1,0 +1,398 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%; 
+  margin: 0;
+}
+
+#nav_bar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: rgba(225,225,255, 0.4);
+  color: white;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: height 0.5s ease
+}
+#nav-items {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 50px; /* Add spacing between items */
+  height: 100%;
+}
+
+#nav-items ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav-items li {
+  font-size: 30px; /* Make items bigger */
+  font-family: "Poppins", serif;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding:10px;
+}
+#nav-items li:hover {
+  transform: scale(1.1); /* Add hover effect */
+  color: #FF69B4;
+}
+
+button{
+  position: fixed; /* Always in the same position */
+  top: 10px; /* Adjust top spacing */
+  right: 10px; /* Adjust right spacing */
+  z-index: 101; /* Ensure it appears above all sections */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Close Nav Button (hidden by default) */
+
+body{
+  background-image: url("images/night_sky.jpg");
+  background-size: cover;
+}
+#skills{
+  display:flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+main{
+  position: relative;
+  width:100%;
+  height:100vh;
+
+}
+#main_page{
+  overflow:hidden;
+}
+
+
+canvas{
+  display:block;
+  position:absolute;
+  inset:0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+
+#homeh{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: white;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 50px;
+  text-align:center;
+  line-height:1.1;
+  letter-spacing:1px;
+  user-select:none;
+  z-index:2;
+}
+
+#home{
+  position: absolute;
+  padding-top:20px;
+  top:56%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: white;
+  font-weight: 400;
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  text-align:center;
+  line-height:1.1;
+  letter-spacing:1px;
+  user-select:none;
+  z-index:2;
+}
+
+span{
+  color: #FF69B4;
+
+}
+
+@media (max-width: 610px)  { 
+  h3{
+    padding-top:80px;
+  } 
+}
+
+.circles-container span{
+  position: absolute;
+  width:2.2px;
+  aspect-ratio:1/1;
+  border-radius:50%;
+  opacity: 0.6;
+}
+
+@keyframes blink {
+  0%, 100% {opacity: 1;}
+  50% {opacity: 0;}
+}
+
+
+.circles-container span:nth-child(2n){
+  background-color: white;
+  animation: blink 4s linear infinite;
+}
+.circles-container span:nth-child(3n){
+  background-color: white;
+  animation: blink 3s linear infinite;
+}
+
+.circles-container span:nth-child(5n){
+  background-color: white;
+  animation: blink 3.5s linear infinite;
+}
+
+.circles-container span:nth-child(7n){
+  background-color: white;
+  animation: blink 3.2s linear infinite;
+}
+
+/* About me */
+#about_me{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+
+}
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:50%;
+}
+.left-side #photo_border {
+  transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+.left-side #photo_border:hover {
+  transform: scale(1.1); /* Slightly enlarge the border */
+}
+.right-side :hover {
+  transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/* Left Side: Picture with a frame */
+#photo_border {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: white; /* Frame color */
+  border: 10px solid white; /* Adjust frame thickness */
+  border-radius: 8px; /* Optional: Slight rounded edges */
+  padding: 20px; /*Space between the picture and frame */
+  width:70%;
+  margin:40px;
+}
+
+.right-side {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  width: 50%;
+  padding-right:40px;
+}
+
+#photo_border img {
+  width: 500px; /* Adjust the size for your vertical picture */
+  height: auto; /* Keep proportions */
+  display: block;
+  border-radius: 4px; /* Optional: Match frame's rounded corners */
+}
+h1{
+  color:white;
+  position:relative;
+  text-align: center;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 50px;
+  padding:10px;
+}
+
+h3{
+  text-align: center;
+  color:aliceblue;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 40px;
+
+}
+
+p{
+  color: black;
+  padding:10px;
+  background-color: white;
+  border-radius: 8px;
+  font-family: "Poppins", serif;
+  padding:10px;
+}
+
+#skill{
+  background: rgba(225,225,255, 0.1);
+}
+
+#skills img{
+  width:10%;
+  padding:10px;
+}
+
+#skills {
+  transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+#skills :hover {
+  transform: scale(1.1); /* Slightly enlarge the border */
+}
+
+/* Experience */
+
+#experience_div{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+#work_ex{
+  display:flex;
+  flex-direction: column;
+  width:40%;
+}
+
+#work_ex :hover {
+ opacity:0.7; /* Slightly enlarge on hover */
+}
+
+#work_ex div{
+  color:black;
+  background-color: aliceblue;
+  margin:15px;
+  border-radius: 6px;
+}
+
+#work_ex div p{
+  margin: 0px;
+  color: dark;
+}
+
+h4{
+  color:black;
+  padding-left:9px;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 20px;
+}
+/* Projects */
+#project_sec{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap:wrap;
+}
+
+#project_sec div {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin:30px;
+  width: 400px;
+}
+#projects h3{
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 25px;
+}
+#project_sec div img{
+  width:400px;
+  margin:0px 0px 20px 0px;
+  height:350px;
+  border-radius: 10px;
+}
+
+/* Awards & Involvement */
+
+#aww{
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+#aww div{
+  display:flex;
+  margin:20px;
+  justify-content: center;
+}
+#aww div div h3{
+  color:black;
+  font-weight: 600;
+  font-family: "Poppins", serif;
+  font-size: 20px;
+}
+#aww div div p{
+  text-align: center;
+}
+#aww div div{
+  color:black;
+  background-color: aliceblue;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius:10px;
+  width:40%;
+}
+#aww div img{
+  width: 300px;
+  margin:10px;
+  border-radius: 10px;
+  height:auto;
+}
+
+#aww div{
+  transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+#aww div :hover {
+  transform: scale(1.1); /* Slightly enlarge the border */
+}

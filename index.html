@@ -3,12 +3,167 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="page.css">
-    <!-- <link rel="stylesheet" href="mobile.css">
-    <script src="page.js" defer></script> -->
-    <title>Page Title</title>
+    <!-- <link rel="stylesheet" href="mobile.css"> -->
+    <script src="particles.js" defer></script> 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>IanaFeniuc Portfolio</title>
   </head>
   <body>
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
+   
+    <!-- Open Nav Button -->
+    <button class="animate__animated animate__swing" type="button" id="open_nav" onclick="openNav()">
+      <img src="images/menu_icon.webp" alt="Menu Icon" style="width: 50px; height: 50px;">
+    </button>
+
+    <!-- Close Nav Button -->
+    <button type="button" id="close_nav" onclick="closeNav()" style="display: none;">
+      <img src="images/close_icon.jpg" alt="Close Icon" style="width: 50px; height: 50px;">
+    </button>
+
+    <!-- Home page -->
+    <main id ="main_page">
+      <h1 id="homeh"> <span>Iana </span>Feniuc </h1>
+      <h3 id="home"> I'm a <span class="auto-type"></span></h3>
+      <canvas id="animated-background"></canvas>
+      <div class="circles-container">
+        <span></span>
+      </div>
+    </main>
+    <!-- Nav Bar -->
+    <main id="nav_bar">
+      <div id="nav-items">
+        <ul>
+          <li> Home </li>
+          <li> About Me</li>
+          <li> Experience  </li>
+          <li> Projects </li> 
+          <li> Awards & Involvements</li>
+        </ul>
+      </div>
+    </main>
+    <!-- About Me Page -->
+    <main id="about_me">
+      <h1> Get To Know <span> Me </span></h1>
+      <div class="content-container">
+        <div class="left-side">
+          <div id="photo_border">
+            <img src="images/picture.jpg" alt="Profile Picture">
+            <!-- <div class="icon-container">
+              <a href="https://gitlab.com/iana_feni"> <img class="icon" src="images/gitlab_logo.png" alt="Gitlab Logo"></a>
+              <a href="https://www.linkedin.com/in/iana-feniuc-0439092a4/"> <img class="icon" src="images/link_logo.png" alt="Linkedin Logo"></a>
+            </div> -->
+          </div>
+        </div>
+        <div class="right-side">
+          <h3>Changing the world, <span> one line at a time...</span></h3>
+          <p>Hey, I'm Iana! I'm a passionate Computer Science student currently studying at Dawson. I have experience in IT support, software development, and leadership. Skilled in Python, Java, and React, I enjoy solving complex problems and creating impactful solutions. As an advocate for diversity in tech, I actively promote inclusivity through initiatives like the Dawson Ada Society.</p>
+        </div>
+      </div>
+      <div id="skill">
+        <h1>
+        <span> Skills </span>
+        </h1>
+        <div id="skills">
+          <img class="icons" src="images/js_logo.png" alt="Javascript Picture">
+          <img class="icons" src="images/java_logo.png" alt="Java Picture">
+          <img class="icons" src="images/python_logo.png" alt="Python Picture">
+          <img class="icons" src="images/sql_logo.png" alt="SQL Picture">
+          <img class="icons"src="images/c_logo.png" alt="C# Picture">
+          <img class="icons" src="images/kotlin_logo.png" alt="Kotlin Picture">
+          <img class="icons" src="images/linux_logo.png" alt="Linux Picture">
+          <img class="icons"src="images/bash_logo.png" alt="Bash Picture">
+          <img class="icons"src="images/react_logo.png" alt="React Picture">
+          <img class="icons"src="images/docker_logo.png" alt="Docker Picture">
+          <img class="icons"src="images/aws_logo.png" alt="AWS Picture">
+          <img class="icons"src="images/github_logo.png" alt="GitHub Picture">
+          <img class="icons"src="images/gitlab_logo.png" alt="GitLab Picture">
+          <img class="icons"src="images/flask_logo.png" alt="Flask Picture">
+          <img class="icons"src="images/express_logo.png" alt="Express Picture">
+        </div>
+      </div>
+    </main>
+    <!-- Experience -->
+    <main id="experience">
+      <h1> <span>Experience</span></h1>
+      <div id="experience_div">
+        <div id ="image">
+          <img class="icons"src="images/work.png" alt="Work Picture">
+        </div>
+        <div id="work_ex">
+          <div id="hhf">
+            <h4> Upcoming Software Developer Intern </h4>
+            <p> Soon to be working there ! </p>
+            <p> Summer 2025</p>
+          </div>
+          <div>
+            <h4> IT Technicien </h4>
+            <p> Provided IT support by troubleshooting network issues and other Cisco systems for both clients and employees. 
+              Led to a 15% boost in operational efficiency and a 10% increase in overall productivity by installing and configuring 
+              new POS software for over 100+ team members.</p>
+            <p> April - October 2024</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Projects -->
+    <main id="projects">
+      <h1> Projects</h1> 
+      <h3> My Latest <span> Creations</span></h3>
+
+      <div id="project_sec">
+
+        <div>
+          <a href="https://weatherwreck.onrender.com/"><img class="icons"src="images/project1.png" alt="WeatherWreck Picture"></a>
+          <p>This project is a web application (MERN Stack) that visualizes car accidents and weather conditions. It displays an interactive map that will allow the user to view accidents, it will have features such as a detailed charts, iteractive datasets and search functionalities.</p>
+        </div>
+
+        <div>
+          <a href="https://gitlab.com/dawson-csy3-24-25/511/section2/Iana-Ameena-Youry/bookreadingapp"><img class="icons"src="images/project2.png" alt="Kotlin App Picture"></a>
+          <p>BookReadingApp is a simple and fun mobile app for book lovers. It lets you easily browse through books, check out detailed tables of contents, and jump straight to your favorite chapters.</p>
+        </div>
+
+        <div>
+          <a href="https://gitlab.com/dawson-csy3-24-25/510/section2/Feniuc/paintdrops"><img class="icons"src="images/PaintDrops.png" alt="Kotlin App Picture"></a>
+          <p>PaintDrops is an interactive application that allows users to create dynamic visual effects by adding and clearing paint drops on a surface. The application also supports an automatic spiral pattern generation feature and a fading algorythm.</p>
+        </div>
+
+      </div>
+
+    </main>
+    <!--  -->
+    <main id="awards">
+      <h1> Awards <span> & </span>Involvement</h1>
+      <div id="aww">
+        <div id="award1">
+          <div>
+            <h3>Dawson Teachers’ Union Polytechnique Memorial Scholarship </h3>
+            <p> This scolarship is awarded to a student who has shown a commitment to persevering and overcoming obstacles within their field.            </p>
+          </div>
+          <a href="https://www.dawsoncollege.qc.ca/awards-scholarships/award-recipients/feniuc-iana/"><img class="icons"src="images/award_photo.jpg" alt="Awards Ceremony Picture"></a>
+        </div>
+        <div id="award2">
+          <a href="https://concertationmtl.ca/techno-au-feminin/"><img class="icons"src="images/adas.jpg" alt="Ada Society Picture"></a>
+          <div>
+            <h3> Ada Society Involvement</h3>
+            <p>Organized and planned events for the Dawson Ada Society, promoting inclusivity for women in tech by growing the 
+              community and engaging over 5 new female members. </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Typed script dependencies -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed(".auto-type",{
+        strings: ["Software Developer", "Creative Thinker", "Advocate for Women in Tech"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+      })
+    </script>
   </body>
 </html>
